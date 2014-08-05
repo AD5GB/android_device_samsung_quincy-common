@@ -110,6 +110,6 @@
     <bool name="config_stylusGestures">true</bool>
 
     <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
+    <!--bool name="config_enableTorch">true</bool-->
     
 </resources>
