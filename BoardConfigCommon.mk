@@ -31,10 +31,10 @@ BOARD_FAMILY := quincy
 -include device/samsung/msm8660-common/BoardConfigCommon.mk
 
 # Kernel
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom usb_id_pin_rework=true no_console_suspend=true zcache
-BOARD_KERNEL_BASE           := 0x48000000
-BOARD_KERNEL_PAGESIZE       := 2048
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01600000
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom usb_id_pin_rework=true no_console_suspend=true
+BOARD_KERNEL_BASE := 0x48000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
@@ -56,3 +56,9 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+BOARD_RECOVERY_SWIPE := true
+
+# TWRP
+DEVICE_RESOLUTION := 800x1280
+TW_THEME := portrait_hdpi
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.524801/leds/lcd-backlight/brightness
